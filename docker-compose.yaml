@@ -1,0 +1,12 @@
+version: "2.1"
+
+services:
+  order:
+    container_name: metrics
+    image: metrics-service
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "4000:4000"
+    command: python app.py
